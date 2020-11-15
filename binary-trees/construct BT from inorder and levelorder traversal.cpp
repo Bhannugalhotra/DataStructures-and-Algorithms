@@ -35,7 +35,7 @@ node* construct_tree_from_inorder_and_levelorder(vector<int> in, vector<int> lev
     
     return tree;
 }
-Node *createTree(int parent[], int n)
+node* createTree(int parent[], int n)
 {
     vector<Node*> a;
     
