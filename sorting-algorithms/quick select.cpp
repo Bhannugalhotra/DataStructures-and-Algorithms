@@ -14,9 +14,9 @@ int quick_select(vector<int> &arr,int l,int r,int k)
 	 	    while(true)
 	 	    {
 	 	        while(arr[++i] < v);
-	 	        while(j > l-1 and arr[--j] > v);
+	 	        while(j > l and arr[--j] > v);
 	 	         
-	 	        if(i>j)
+	 	        if(i>=j)
 	 	        break;
 
 	 	        swap(arr[i],arr[j]);    
@@ -44,9 +44,9 @@ int recursive_quick_select(vector<int> &arr,int l,int r,int k)
 	    {
 	     	while(arr[++i] < v);
 	     	
-	     	while(j > l-1 and arr[--j] > v);
+	     	while(j > l and arr[--j] > v);
 	     	
-	     	if(i > j)
+	     	if(i >= j)
 	     	break;
 	     	
 	     	swap(arr[i],arr[j]);
