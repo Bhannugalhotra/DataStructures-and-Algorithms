@@ -8,20 +8,20 @@ void quicksort(vector<int> &arr,int l, int r)
 	int v = arr[r];
 
 	// using random pivot
-    int pivot = rand() % (r-l+1); 
-    swap(arr[l + pivot],arr[r]);
+    	int pivot = rand() % (r-l+1); 
+    	swap(arr[l + pivot],arr[r]);
 
 	    while(true)
 	    {
 	     	while(arr[++i] < v);
 
-	     	while(j > l-1 and arr[--j] > v);
+	     	while(j > l and arr[--j] > v);
 
 	     	if(i >= j)
 	     	break;
 	     	
 	     	swap(arr[i],arr[j]);	
-		}
+	     }
 		 
 		swap(arr[i],arr[r]);
 		 
@@ -42,12 +42,12 @@ void three_way_quicksort(vector<int> &arr, int l, int r)
 	 	if(arr[i] < v)
 	 	    swap(arr[i++],arr[lt++]);
 
-	    else if(arr[i] > v)
+	    	else if(arr[i] > v)
 		 	swap(arr[i],arr[gt--]);
 
 		else
 		    i++;
-    }
+    	}
 	    
 			    
 	three_way_quicksort(arr,l,lt-1);
