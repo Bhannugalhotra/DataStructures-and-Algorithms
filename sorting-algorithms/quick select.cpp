@@ -36,6 +36,9 @@ int quick_select(vector<int> &arr,int l,int r,int k)
 
 int recursive_quick_select(vector<int> &arr,int l,int r,int k)
 {
+	if(l >= r)
+	    return a[r];
+	
 	int i = l - 1;
 	int j = r;
 	int v = arr[r];
@@ -55,11 +58,10 @@ int recursive_quick_select(vector<int> &arr,int l,int r,int k)
 		swap(arr[i],arr[r]);
 		 
 		if(i == k)
-		return arr[i];
+		    return arr[k];
 		 
 		if(i > k)
-		return recursive_quick_select(arr,l,i-1,k);
+		   return recursive_quick_select(arr,l,i-1,k);
 		 
-		else
 		return recursive_quick_select(arr,i+1,r,k);
 }
