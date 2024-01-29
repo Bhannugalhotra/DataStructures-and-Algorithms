@@ -48,12 +48,12 @@ int strongly_connected_components(vector<int> adj[],int V)
 	int no_of_components = 0;
 	while(!s.empty())
 	{
-		no_of_components++;
 		int u = s.top();  s.pop();
 		
-		if(!visited[u])
-		dfs_util2(trans,u,visited);
-		
+		if(!visited[u]){
+			no_of_components++;
+			dfs_util2(trans,u,visited);
+		}
 		cout<<endl;
 	}
 
